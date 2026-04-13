@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小米SU7焕新版 vs Tesla Model Y 购车决策对比</title>
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+    background: #F2F2F2;
+    color: #2D2926;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: #F2F2F2;
+    position: relative;
+    overflow: hidden;
+    padding: 18mm 14mm 14mm 14mm;
+    /* subtle grid background */
+    background-image:
+      linear-gradient(rgba(45,41,38,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45,41,38,0.04) 1px, transparent 1px);
+    background-size: 8mm 8mm;
+  }
+
+  /* ===== HEADER ===== */
+  .header {
+    text-align: center;
+    margin-bottom: 6mm;
+    position: relative;
+  }
+
+  .header-coord {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 7px;
+    color: #999;
+    font-family: "SF Mono", "Menlo", monospace;
+    letter-spacing: 0.5px;
+  }
+
+  .header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #1a1a1a;
+    margin-bottom: 2mm;
+  }
+
+  .header h1 .su7 {
+    color: #E91E63;
+  }
+
+  .header h1 .vs {
+    color: #999;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0 4px;
+  }
+
+  .header .subtitle {
+    font-size: 13px;
+    color: #777;
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+
+  .divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2D2926 20%, #2D2926 80%, transparent);
+    margin: 4mm 0;
+    opacity: 0.15;
+  }
+
+  /* ===== MODULE ===== */
+  .module {
+    background: #fff;
+    border-radius: 6px;
+    padding: 5mm 5mm 4mm 5mm;
+    margin-bottom: 4mm;
+    position: relative;
+    border: 1px solid rgba(45,41,38,0.08);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  .module.highlight {
+    border: 2px solid #E91E63;
+    box-shadow: 0 2px 12px rgba(233,30,99,0.10);
+  }
+
+  .module-id {
+    position: absolute;
+    top: 3mm;
+    right: 4mm;
+    font-size: 8px;
+    color: #bbb;
+    font-family: "SF Mono", "Menlo", monospace;
+    letter-spacing: 1px;
+  }
+
+  .module-header {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+    margin-bottom: 3mm;
+  }
+
+  .module-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  .module-icon.teal { background: #B8D8BE; }
+  .module-icon.pink { background: #FCE4EC; }
+  .module-icon.blue { background: #E3F2FD; }
+  .module-icon.amber { background: #FFF8E1; }
+
+  .module-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .module-title .tag {
+    display: inline-block;
+    background: #E91E63;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 6px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+
+  /* ===== SALES COMPARISON ===== */
+  .sales-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3mm;
+  }
+
+  .sales-card {
+    padding: 3mm;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .sales-card.su7 {
+    background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+  }
+
+  .sales-card.my {
+    background: linear-gradient(135deg, #FAFAFA, #F5F5F5);
+    border: 1px solid #eee;
+  }
+
+  .sales-card .brand {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 1mm;
+  }
+
+  .sales-card .number {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.1;
+  }
+
+  .sales-card .unit {
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+  }
+
+  .sales-card .growth {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 1mm;
+  }
+
+  .sales-card .growth.up { color: #2E7D32; }
+  .sales-card .growth.down { color: #C62828; }
+
+  .sales-card .note {
+    font-size: 11px;
+    color: #888;
+    margin-top: 1mm;
+  }
+
+  /* ===== COMPARISON TABLE ===== */
+  .cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+
+  .cmp-table th {
+    background: #F5F5F5;
+    font-weight: 600;
+    padding: 2mm 2.5mm;
+    text-align: center;
+    border-bottom: 2px solid #E0E0E0;
+    font-size: 11px;
+    color: #555;
+  }
+
+  .cmp-table th:first-child {
+    text-align: left;
+    width: 22%;
+  }
+
+  .cmp-table td {
+    padding: 2mm 2.5mm;
+    text-align: center;
+    border-bottom: 1px solid #F0F0F0;
+    vertical-align: middle;
+  }
+
+  .cmp-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: #444;
+  }
+
+  .cmp-table tr.alert {
+    background: #FFF3F5;
+  }
+
+  .cmp-table tr.alert td {
+    border-bottom: 1px solid #FFCDD2;
+  }
+
+  .cmp-table .win {
+    color: #2E7D32;
+    font-weight: 600;
+  }
+
+  .cmp-table .lose {
+    color: #C62828;
+  }
+
+  .cmp-table .tie {
+    color: #F57F17;
+  }
+
+  .cmp-table .verdict {
+    font-weight: 700;
+    font-size: 11px;
+  }
+
+  .alert-box {
+    background: #FFF3F5;
+    border-left: 3px solid #E91E63;
+    padding: 2mm 3mm;
+    margin-top: 2mm;
+    font-size: 11px;
+    color: #C62828;
+    border-radius: 0 4px 4px 0;
+  }
+
+  /* ===== ADAS SECTION ===== */
+  .adas-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4mm;
+    margin-bottom: 3mm;
+  }
+
+  .adas-price-card {
+    padding: 4mm;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .adas-price-card.free {
+    background: linear-gradient(135deg, #E8F5E9, #A5D6A7);
+    border: 2px solid #66BB6A;
+  }
+
+  .adas-price-card.paid {
+    background: linear-gradient(135deg, #FFF3F5, #FFCDD2);
+    border: 2px solid #E91E63;
+  }
+
+  .adas-price-card .label {
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 1mm;
+    font-weight: 500;
+  }
+
+  .adas-price-card .price {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .adas-price-card.free .price {
+    color: #2E7D32;
+  }
+
+  .adas-price-card.paid .price {
+    color: #C62828;
+  }
+
+  .adas-price-card .price .yen {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .adas-price-card .desc {
+    font-size: 11px;
+    color: #777;
+    margin-top: 1mm;
+  }
+
+  .adas-detail {
+    font-size: 12px;
+    color: #444;
+    line-height: 1.7;
+  }
+
+  .adas-detail li {
+    margin-bottom: 1mm;
+    list-style: none;
+    padding-left: 5mm;
+    position: relative;
+  }
+
+  .adas-detail li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #B8D8BE;
+    font-weight: bold;
+  }
+
+  .adas-conclusion {
+    background: linear-gradient(90deg, #FFF8E1, #FFF3E0);
+    border-left: 3px solid #FF9800;
+    padding: 2.5mm 3mm;
+    margin-top: 3mm;
+    font-size: 12.5px;
+    color: #E65100;
+    font-weight: 600;
+    border-radius: 0 4px 4px 0;
+    line-height: 1.6;
+  }
+
+  /* ===== PRICE SECTION ===== */
+  .price-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 6mm;
+    justify-content: center;
+    margin: 3mm 0;
+    height: 50mm;
+  }
+
+  .price-bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+  }
+
+  .price-bar {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .price-bar.su7-bar {
+    height: 28mm;
+    background: linear-gradient(180deg, #A5D6A7, #81C784);
+  }
+
+  .price-bar.my-bar {
+    height: 44mm;
+    background: linear-gradient(180deg, #FFCDD2, #EF9A9A);
+  }
+
+  .price-bar .fsd-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 12mm;
+    background: repeating-linear-gradient(
+      135deg,
+      rgba(198,40,40,0.15),
+      rgba(198,40,40,0.15) 2px,
+      transparent 2px,
+      transparent 6px
+    );
+    border-bottom: 1px dashed #C62828;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #C62828;
+    font-weight: 600;
+  }
+
+  .price-bar .bar-price {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  }
+
+  .price-bar .bar-price .wan {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .price-bar-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    margin-top: 2mm;
+  }
+
+  .price-gap {
+    position: absolute;
+    right: -20mm;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #E91E63;
+    color: #fff;
+    padding: 1.5mm 3mm;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .price-gap::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #E91E63;
+  }
+
+  .price-extras {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2mm;
+    margin-top: 3mm;
+  }
+
+  .price-extra {
+    background: #F5F5F5;
+    border-radius: 4px;
+    padding: 2mm;
+    text-align: center;
+  }
+
+  .price-extra .pe-label {
+    font-size: 10px;
+    color: #999;
+  }
+
+  .price-extra .pe-value {
+    font-size: 13px;
+    font-weight: 700;
+    color: #2E7D32;
+  }
+
+  .price-conclusion {
+    background: #F5F5F5;
+    border-radius: 4px;
+    padding: 2.5mm 3mm;
+    margin-top: 3mm;
+    text-align: center;
+    font-size: 12.5px;
+    color: #444;
+    font-weight: 500;
+  }
+
+  .price-conclusion strong {
+    color: #E91E63;
+    font-weight: 700;
+  }
+
+  /* ===== VERDICT ===== */
+  .verdict-bar {
+    background: linear-gradient(135deg, #1a1a1a, #2D2926);
+    color: #fff;
+    border-radius: 6px;
+    padding: 4mm 5mm;
+    margin-top: 4mm;
+    text-align: center;
+  }
+
+  .verdict-badges {
+    display: flex;
+    justify-content: center;
+    gap: 3mm;
+    margin-bottom: 2mm;
+  }
+
+  .verdict-badge {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 4px;
+    padding: 1mm 3mm;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 1.5mm;
+  }
+
+  .verdict-badge .check {
+    color: #66BB6A;
+    font-weight: 800;
+  }
+
+  .verdict-text {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 1mm;
+    line-height: 1.5;
+  }
+
+  .verdict-sub {
+    font-size: 15px;
+    font-weight: 400;
+    color: #FFF59D;
+  }
+
+  .sources {
+    margin-top: 3mm;
+    font-size: 9px;
+    color: #aaa;
+    text-align: center;
+    letter-spacing: 0.3px;
+  }
+
+  /* corner decorations */
+  .corner-tl, .corner-br {
+    position: absolute;
+    width: 12mm;
+    height: 12mm;
+    border: 1px solid rgba(45,41,38,0.08);
+  }
+
+  .corner-tl {
+    top: 8mm;
+    left: 8mm;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .corner-br {
+    bottom: 8mm;
+    right: 8mm;
+    border-left: none;
+    border-top: none;
+  }
+
+  .ruler-top {
+    position: absolute;
+    top: 5mm;
+    left: 14mm;
+    right: 14mm;
+    height: 3mm;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .ruler-tick {
+    width: 1px;
+    background: rgba(45,41,38,0.1);
+    flex-shrink: 0;
+  }
+
+  @media print {
+    body { background: #F2F2F2; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <!-- Corner decorations -->
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+
+  <!-- ===== HEADER ===== -->
+  <div class="header">
+    <span class="header-coord">SEC-00 · 2026.04</span>
+    <h1>
+      <span class="su7">小米SU7焕新版</span>
+      <span class="vs">vs</span>
+      Tesla Model Y
+    </h1>
+    <div class="subtitle">购 车 决 策 · 数 据 对 比</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ===== MOD-01: SALES ===== -->
+  <div class="module">
+    <span class="module-id">MOD-01</span>
+    <div class="module-header">
+      <div class="module-icon teal">📊</div>
+      <div class="module-title">销量趋势 — 市场用脚投票</div>
+    </div>
+    <div class="sales-grid">
+      <div class="sales-card su7">
+        <div class="brand">小米 SU7</div>
+        <div class="number">25.82<span class="unit">万辆</span></div>
+        <div class="growth up">▲ +200%</div>
+        <div class="note">20万+纯电轿车销冠</div>
+        <div class="note">品牌全年 41.18万辆，新势力增速最快</div>
+      </div>
+      <div class="sales-card my">
+        <div class="brand">Tesla Model Y</div>
+        <div class="number">42.53<span class="unit">万辆</span></div>
+        <div class="growth down">▼ -16%</div>
+        <div class="note">首次年度下滑</div>
+        <div class="note">特斯拉中国全年 ~55万辆，增长见顶</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MOD-02: SAFETY ===== -->
+  <div class="module">
+    <span class="module-id">MOD-02</span>
+    <div class="module-header">
+      <div class="module-icon blue">🛡️</div>
+      <div class="module-title">安全性对比 — 两车都安全</div>
+    </div>
+    <table class="cmp-table">
+      <thead>
+        <tr>
+          <th>指标</th>
+          <th>小米 SU7</th>
+          <th>Tesla Model Y</th>
+          <th>判定</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>碰撞测试</td>
+          <td class="win">C-IASI 三项 G+（最高）</td>
+          <td class="win">Euro NCAP 五星 + IIHS TSP+</td>
+          <td class="verdict tie">≈ 持平</td>
+        </tr>
+        <tr>
+          <td>起火率</td>
+          <td class="win">约 0.12/万</td>
+          <td>远低于行业均值</td>
+          <td class="verdict" style="color:#888">行业均值 0.96/万</td>
+        </tr>
+        <tr>
+          <td>气囊数</td>
+          <td class="win">9 个</td>
+          <td>8 个</td>
+          <td class="verdict win">SU7 +1</td>
+        </tr>
+        <tr>
+          <td>车身强度钢</td>
+          <td class="win">2200 MPa</td>
+          <td style="color:#999">未公布</td>
+          <td class="verdict win">SU7 明确</td>
+        </tr>
+        <tr class="alert">
+          <td>⚠️ 逃生设计</td>
+          <td class="win">机械应急开门 ✓</td>
+          <td class="lose">断电无法外开 ✗</td>
+          <td class="verdict win">SU7 关键优势</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="alert-box">
+      ⚠ Model Y 断电后无法从外部打开车门，此设计缺陷已导致全球 15+ 人在事故中死亡。SU7 焕新版新增机械应急开门装置。
+    </div>
+  </div>
+
+  <!-- ===== MOD-03: ADAS & PARKING (HIGHLIGHT) ===== -->
+  <div class="module highlight">
+    <span class="module-id">MOD-03</span>
+    <div class="module-header">
+      <div class="module-icon pink">🅿️</div>
+      <div class="module-title">智驾与泊车 — 北京停车刚需 <span class="tag">重点</span></div>
+    </div>
+
+    <div class="adas-hero">
+      <div class="adas-price-card free">
+        <div class="label">SU7 智驾 + 泊车</div>
+        <div class="price"><span class="yen">¥</span>0</div>
+        <div class="desc">全系免费标配</div>
+      </div>
+      <div class="adas-price-card paid">
+        <div class="label">Model Y 智驾 + 泊车</div>
+        <div class="price"><span class="yen">¥</span>6.4<span style="font-size:18px">万</span></div>
+        <div class="desc">需购买 FSD 完整包</div>
+      </div>
+    </div>
+
+    <ul class="adas-detail">
+      <li><strong>城市 NOA</strong>：SU7 覆盖 300+ 城市，全系免费；Model Y 的 FSD 需额外花 6.4 万元，且中国体验远不如美国</li>
+      <li><strong>自动泊车</strong>：SU7 全系免费标配，支持极窄车位自动泊入泊出；Model Y 的自动泊车包含在 FSD 包中</li>
+      <li><strong>车身宽度</strong>：SU7 宽 1963mm vs Model Y 宽 1920mm（含后视镜 2129mm），北京商场车位两车都紧凑</li>
+    </ul>
+
+    <div class="adas-conclusion">
+      在北京停车场景下，SU7 的免费自动泊车是实实在在的刚需。省下的 6.4 万可以用好几年。
+    </div>
+  </div>
+
+  <!-- ===== MOD-04: PRICE ===== -->
+  <div class="module">
+    <span class="module-id">MOD-04</span>
+    <div class="module-header">
+      <div class="module-icon amber">💰</div>
+      <div class="module-title">价格 — 数学题不骗人</div>
+    </div>
+
+    <div class="price-bars">
+      <div class="price-bar-group">
+        <div class="price-bar su7-bar">
+          <div class="bar-price">21.99<span class="wan">万</span></div>
+        </div>
+        <div class="price-bar-label">SU7 标准版</div>
+      </div>
+      <div class="price-bar-group" style="position:relative;">
+        <div class="price-bar my-bar">
+          <div class="fsd-overlay">+ FSD 6.4万</div>
+          <div class="bar-price" style="margin-top:8mm;">32.75<span class="wan">万</span></div>
+        </div>
+        <div class="price-bar-label">Model Y 后驱 + FSD</div>
+        <div class="price-gap">差价近 11 万</div>
+      </div>
+    </div>
+
+    <div class="price-extras">
+      <div class="price-extra">
+        <div class="pe-label">续航优势</div>
+        <div class="pe-value">+127 km</div>
+        <div class="pe-label">720 vs 593 km</div>
+      </div>
+      <div class="price-extra">
+        <div class="pe-label">智驾</div>
+        <div class="pe-value">免费 vs 6.4万</div>
+        <div class="pe-label">300+ 城市 NOA</div>
+      </div>
+      <div class="price-extra">
+        <div class="pe-label">气囊</div>
+        <div class="pe-value">9 vs 8 个</div>
+        <div class="pe-label">多 1 个气囊</div>
+      </div>
+    </div>
+
+    <div class="price-conclusion">
+      <strong>21.99 万</strong>买到的东西，Model Y 需要花 <strong>32.75 万</strong>才能补齐
+    </div>
+  </div>
+
+  <!-- ===== VERDICT ===== -->
+  <div class="verdict-bar">
+    <div class="verdict-badges">
+      <div class="verdict-badge"><span class="check">✓</span> 安全</div>
+      <div class="verdict-badge"><span class="check">✓</span> 智驾</div>
+      <div class="verdict-badge"><span class="check">✓</span> 续航</div>
+      <div class="verdict-badge"><span class="check">✓</span> 价格</div>
+    </div>
+    <div class="verdict-text">Model Y 是好车，但 SU7 焕新版在四个维度全面领先</div>
+    <div class="verdict-sub">这不是品牌偏好，是性价比的数学题</div>
+  </div>
+
+  <div class="sources">
+    数据来源：中保研 C-IASI · Euro NCAP · IIHS · 央视网/应急管理部 · Tesla 安全报告 · 证券时报 · 2025年全年数据
+  </div>
+</div>
+</body>
+</html>
