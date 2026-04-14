@@ -28,6 +28,10 @@
 - [极氪 007GT](zeekr-007gt.md) — 猎装轿跑，20.29万起全配空悬+智驾+800V
 - [极氪 001](zeekr-001.md) — 旗舰猎装，900V/12C极速充电，Euro NCAP五星
 
+### 导出（可分享）
+- [SU7 vs Model Y 对比 PDF](export/SU7vs-ModelY-对比.pdf) — 面向长辈的决策对比图
+- [七车对比完整报告 PDF](export/七车对比-完整报告.pdf) — 四合一完整报告
+
 ### Phase 2: 负面信息
 - [SU7 负面档案](negatives-su7.md) — 安全事故、品控、虚假宣传、维权等
 - [YU7 负面档案](negatives-yu7.md) — 安全事故、配置偷改、交付延迟等
@@ -42,9 +46,10 @@
 - [国产品牌销量全景](industry-sales-context.md) — 行业销量、保有量与数据置信度（含极氪分车型销量）
 
 ### Phase 5-6: 对比与决策
-- [横向对比表 v2](comparison-v2.md) — 按第一性原理五层框架组织（七车）
-- [最终决策矩阵](decision-matrix.md) — 加权评分、敏感性分析、决策树（七车）
-- [横向对比表 v1](comparison.md) — 初版（已被v2取代）
+- [横向对比表 v2](comparison-v2.md) — 按第一性原理五层框架组织（七车，后驱/入门版）
+- [最终决策矩阵](decision-matrix.md) — 加权评分、敏感性分析、决策树（七车，后驱/入门版）
+- [四驱版横向对比](comparison-awd.md) — 四驱版五层框架定性对比
+- [四驱版决策矩阵](decision-matrix-awd.md) — 四驱版加权评分、敏感性分析（含剔除成本层）、决策树
 
 ## 核心结论
 

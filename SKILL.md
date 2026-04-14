@@ -61,6 +61,7 @@ Each Agent performs 8-10 WebSearches covering:
 - Infotainment, cabin chips, OTA frequency
 
 Output: `{instance_name}/{brand}-{model}.md`
+Format: follow template at `{baseDir}/framework/templates/car-profile-template.md`
 
 Data rules:
 - Every data point must cite source and year
@@ -82,6 +83,7 @@ Each Agent performs 8-10 WebSearches covering:
 - Price-cut owner protests
 
 Output: `{instance_name}/negatives-{brand/model}.md`
+Format: follow template at `{baseDir}/framework/templates/negatives-template.md`
 
 Rules:
 - **Only record negatives. No positive balancing.**
@@ -170,6 +172,11 @@ Append:
 - **Key facts to verify** (items with uncertain/outdated data)
 
 Output: `{instance_name}/comparison.md`
+
+**Separation of concerns:**
+- `comparison.md` contains ONLY qualitative comparison: fact tables, fact judgments, layer conclusions, decision path flowchart, and items needing verification. **No scores, no weighted totals, no rankings.**
+- `decision-matrix.md` contains ALL quantitative analysis: scoring tables, weighted totals, rankings, sensitivity analysis, buyer profiles, veto checklists, and decision trees.
+- Do not duplicate content between these two files. The comparison file should end with a cross-reference to the decision matrix for scores.
 
 ### 7. Phase 6 — Final Decision Matrix
 
