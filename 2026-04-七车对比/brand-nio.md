@@ -304,8 +304,8 @@
 - [蔚来ET9上市 - 杭州网](https://auto.hangzhou.com.cn/news/content/2024-12/23/content_8829790.html)
 
 ### 车型档案与负面档案（项目内部文件）
-- `/Users/dongyu.cao/life/car-research/2026-04-七车对比/nio-et5.md`
-- `/Users/dongyu.cao/life/car-research/2026-04-七车对比/nio-es6.md`
-- `/Users/dongyu.cao/life/car-research/2026-04-七车对比/negatives-nio.md`
-- `/Users/dongyu.cao/life/car-research/2026-04-七车对比/nio-safety-data.md`
-- `/Users/dongyu.cao/life/car-research/2026-04-七车对比/industry-sales-context.md`
+- `2026-04-七车对比/nio-et5.md`
+- `2026-04-七车对比/nio-es6.md`
+- `2026-04-七车对比/negatives-nio.md`
+- `2026-04-七车对比/nio-safety-data.md`
+- `2026-04-七车对比/industry-sales-context.md`

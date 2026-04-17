@@ -291,5 +291,5 @@
 - [调查：44%美国特斯拉车主车辆曾被恶意破坏 - 新浪财经](https://finance.sina.com.cn/roll/2025-04-24/doc-ineufnmc3737164.shtml)
 
 ### 安全事故率（交叉引用）
-- [本项目安全事故率分析](/Users/dongyu.cao/life/car-research/2026-04-七车对比/safety-rate-analysis.md)
-- [Model Y 负面档案](/Users/dongyu.cao/life/car-research/2026-04-七车对比/negatives-model-y.md)
+- [本项目安全事故率分析](safety-rate-analysis.md)
+- [Model Y 负面档案](negatives-model-y.md)
